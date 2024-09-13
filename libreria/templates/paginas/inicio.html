@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block titulo %}Página Principal - Sistema Hospitalario{% endblock %}
+
+{% block contenido %}
+<div class="container mt-5">
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Bienvenido al Sistema de Gestión Hospitalaria</h1>
+        <p class="lead">Accede a las secciones del sistema para gestionar la información de los pacientes, médicos y citas.</p>
+        <hr class="my-4">
+        <p>Selecciona una de las siguientes opciones para continuar:</p>
+    </div>
+
+    <div class="row text-center">
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Gestión de Pacientes</h5>
+                    <p class="card-text">Añade, edita y consulta los datos de los pacientes.</p>
+                    <a href="{% url 'pacientes' %}" class="btn btn-primary">Ir a Pacientes</a>
+                </div>
+            </div>
+        </div>
+
+        {% comment %} <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Gestión de Personal</h5>
+                    <p class="card-text">Añade, edita y consulta los datos del personal.</p>
+                    <a href="{% url 'personal' %}" class="btn btn-primary">Ir a Personal</a>
+                </div>
+            </div>
+        </div> {% endcomment %}
+
+    {% comment %} <div class="row text-center">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Administración</h5>
+                    <p class="card-text">Accede al panel administrativo para gestionar el sistema hospitalario.</p>
+                    <a href="{% url 'admin:index' %}" class="btn btn-secondary">Ir al Panel Administrativo</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Iniciar Sesión</h5>
+                    <p class="card-text">Accede con tu cuenta para gestionar el sistema.</p>
+                    <a href="{% url 'login' %}" class="btn btn-success">Iniciar Sesión</a>
+                </div>
+            </div>
+        </div>
+    </div> {% endcomment %}
+</div>
+{% endblock %}
